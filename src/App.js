@@ -47,7 +47,7 @@ const [form, setForm] = React.useState({
         INPUTVAR3: "30",
         INPUTVAR4: "No",
         INPUTVAR5: "Morning",
-        INPUTVAR6: "No",
+        INPUTVAR6: "NA",
         INPUTVAR7: "Yes",
         INPUTVAR8: "5",
         INPUTVAR9: "3",
