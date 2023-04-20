@@ -1,6 +1,7 @@
 
 import './App.css';
 import React from 'react';
+import Input1 from './Form Components/Input1';
 
 function App() {
 const [drinksData, setDrinksData] = React.useState({})
@@ -61,10 +62,13 @@ const [form, setForm] = React.useState({
  
  
   return (
-    <div className="App">
-      <button onClick = {handleSubmit}>press</button>
+    <div className="container">
+      <div className="app">
+        <Input1/>
+      {/* <button onClick = {handleSubmit}>press</button>
       <pre>{JSON.stringify(result, null, 2)}</pre>
-     <pre>{JSON.stringify(drinksData, null, 2)}</pre>
+     <pre>{JSON.stringify(drinksData, null, 2)}</pre> */}
+     </div>
     </div>
   );
 }
