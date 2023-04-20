@@ -2,10 +2,16 @@
 import './App.css';
 import React from 'react';
 import Input1 from './Form Components/Input1';
+import Input2 from './Form Components/Input2';
 
 function App() {
 const [drinksData, setDrinksData] = React.useState({})
 const [result, setResult] = React.useState({})
+const components =[<Input1/>,<Input2/>]
+var count
+function handleNext(){
+  count=count+1
+}
 
 React.useEffect(function() {
     fetch("https://api.up2tom.com/v3/models/58d3bcf97c6b1644db73ad12",{
@@ -64,10 +70,11 @@ const [form, setForm] = React.useState({
   return (
     <div className="container">
       <div className="app">
-        <Input1/>
+        {components[count]}
       {/* <button onClick = {handleSubmit}>press</button>
       <pre>{JSON.stringify(result, null, 2)}</pre>
      <pre>{JSON.stringify(drinksData, null, 2)}</pre> */}
+     <button onClick={handleNext}>Next</button>
      </div>
     </div>
   );
