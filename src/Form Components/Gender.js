@@ -1,17 +1,20 @@
 import React from "react";
 
-export default function Input2(props){
+export default function Gender(props){
     return (
 <div>
     <h1>Gender</h1>
 <input 
     type="radio"
-     id="male"
+     value="Male"
+     name="gender"
+     
  />
  <label htmlFor="male">Male</label>
  <input 
     type="radio"
-     id="Female"
+     value="Female"
+     name="gender"
  />
  <label htmlFor="female">Female</label>
  <h2>Please select the gender that corresponds to you </h2>

@@ -1,16 +1,21 @@
 
 import './App.css';
 import React from 'react';
-import Input1 from './Form Components/Input1';
-import Input2 from './Form Components/Input2';
+import Temperature from './Form Components/Temperature';
+import Gender from './Form Components/Gender';
 
 function App() {
 const [drinksData, setDrinksData] = React.useState({})
 const [result, setResult] = React.useState({})
-const components =[<Input1/>,<Input2/>]
-var count
+const components =[
+<Temperature/>,
+<Gender/>,
+<Age/>]
+const [count,setcount]=React.useState(0)
 function handleNext(){
-  count=count+1
+  setcount(function(prevCount){
+    return prevCount +1
+  })
 }
 
 React.useEffect(function() {
@@ -71,9 +76,9 @@ const [form, setForm] = React.useState({
     <div className="container">
       <div className="app">
         {components[count]}
-      {/* <button onClick = {handleSubmit}>press</button>
+      <button onClick = {handleSubmit}>press</button>
       <pre>{JSON.stringify(result, null, 2)}</pre>
-     <pre>{JSON.stringify(drinksData, null, 2)}</pre> */}
+     <pre>{JSON.stringify(drinksData, null, 2)}</pre>
      <button onClick={handleNext}>Next</button>
      </div>
     </div>
